@@ -1,0 +1,61 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Học HTML CSS </title>
+  <style>
+    .item1 {
+      background: coral;
+      grid-area: head;
+    }
+   
+    .item2 {
+      background: orange;
+      grid-area: ads;
+    }
+   
+    .item3 {
+      background: orangered;
+      grid-area: cont;
+    }
+   
+    .item4 {
+      background: brown;
+      grid-area: foo;
+    }
+   
+    .container {
+      font-size: 1.5em;
+      height: 560px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 45px 30px 1fr auto;
+      grid-gap: 10px;
+      grid-template-areas:
+        "ads head"
+        "ads cont"
+        "ads foo";
+    }
+   
+    @media (min-width: 360px){
+      .container{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+        /* Bạn hãy thay đổi đoạn mã bên dưới */
+        grid-template-areas:
+        "head head"
+        "ads cont"
+        "foo foo";
+        /* Bạn hãy thay đổi đoạn mã bên trên */
+      }
+    }
+  </style>
+  </head>
+  
+  <body>
+  <div class="container">
+    <div class="item1">Phần tiêu đề</div>
+    <div class="item2">Quảng cáo</div>
+    <div class="item3">Nội dung</div>
+    <div class="item4">Phần cuối trang</div>
+  </div>
+  </body>
